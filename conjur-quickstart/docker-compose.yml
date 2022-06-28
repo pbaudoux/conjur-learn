@@ -65,6 +65,8 @@ services:
 
   proxy:
     image: nginx:1.13.6-alpine
+    # Platform needs to be specified, otherwise Docker Compose
+    # will find no match on Apple Silicon
     platform: linux/amd64
     container_name: nginx_proxy
     ports:
